@@ -1,0 +1,29 @@
+pdf_research_task:
+  description: >
+    Search through the provided PDF document to find relevant information about {topic}.
+    Use your document search expertise to identify and extract key passages and information.
+    Additionally, search the internet for the latest information and developments about {topic}.
+    Focus on finding the most pertinent content from both sources that answers the search query.
+  expected_output: >
+    A detailed list of relevant passages and information found in the document,
+    along with the latest web-based findings, organized by source and relevance to the topic.
+  agent: pdf_search_agent
+
+reporting_task:
+  description: >
+    Review the search results and findings from both document analysis and web research.
+    Synthesize the information into a comprehensive and well-structured report with distinct sections.
+    Ensure all key points are expanded with proper context and explanation.
+  expected_output: >
+    A detailed analytical report organized into the following sections:
+    1. Document-Based Findings
+       - Key passages and information from the PDF
+       - Historical context and background
+    2. Latest Web-Based Information
+       - Recent developments and current state
+       - Additional context from online sources
+    3. Combined Analysis
+       - Integration of findings from both sources
+       - Key insights and conclusions
+    Formatted as markdown without '```'
+  agent: reporting_analyst
